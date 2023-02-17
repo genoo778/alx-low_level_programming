@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 /**
@@ -10,12 +11,14 @@
 
 int main(void)
 {
-	char c, b;
+	char c;
 
 	for (c = 'a'; c <= 'z'; c++)
+	{
+		if (c == 'q' || c == 'e')
+			continue;
 		putchar(c);
-	for (b = 'A'; b <= 'Z'; b++)
-		putchar(b);
+	}
 	putchar('\n');
 	return (0);
 }

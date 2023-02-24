@@ -1,19 +1,24 @@
+
 #include <stdio.h>
 
 /**
  * main- Entry point
  * @void: Null value
  *
- * Description: Print numbers from 0 to 9
+ * Description: Print alphabet lowercase
  * Return: Zero value
  */
 
 int main(void)
 {
-	int n;
+	char c;
 
-	for (n = '0'; n <= '9'; n++)
-		putchar(n);
+	for (c = 'a'; c <= 'z'; c++)
+	{
+		if (c == 'q' || c == 'e')
+			continue;
+		putchar(c);
+	}
 	putchar('\n');
 	return (0);
 }

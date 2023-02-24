@@ -4,7 +4,7 @@
  * main- Entry point
  * @void: Null value
  *
- * Description: Print numbers from 0 to 9 separated by comma and space
+ * Description: Print numbers from 00 to 99
  * Return: Zero value
  */
 
@@ -12,10 +12,11 @@ int main(void)
 {
 	int n;
 
-	for (n = '0'; n <= '9'; n++)
+	for (n = 0; n <= 99; n++)
 	{
-		putchar(n);
-		if (n != '9')
+		putchar((n / 10) + '0');
+		putchar((n % 10) + '0');
+		if (n != 99)
 		{
 			putchar(',');
 			putchar(' ');

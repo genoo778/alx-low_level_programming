@@ -1,18 +1,9 @@
 #include "holberton.h"
-/**
- * _isupper - checks for uppercase character
- *@c: int
- *Return: 1 if upper, 0 other
- */
-
-int _isupper(int c)
+int _isupper(int x)
 {
-char alpha;
-for (alpha = 'A'; alpha <= 'Z'; alpha++)
-{
-	if (c == alpha)
-		return (1);
-}
-
-return (0);
+    if(x>=65 && x<=98)
+    {
+	    return(1);
+    }
+	return (0);
 }

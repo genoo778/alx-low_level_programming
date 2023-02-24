@@ -1,30 +1,37 @@
-#include "main.h"
+#include <stdio.h>
+
 /**
- * main - entry point
+ * main - prints the number from 1 - 100, but for mult of 3 & 5 print Fizz Buzz
  *
- * Description: prints FizzBuzz
- *
- * Return: void
- */
+ * Return: Always 0 (Success)
+**/
+
 int main(void)
 {
-	int n;
+	int i;
 
-	for (n = 1; n <= 100; n++)
+	for (i = 1 ; i < 100 ; i++)
 	{
-		if ((n % 3 == 0) && (n % 5 == 0))
-			printf("FizzBuzz");
-		else if (n % 5 == 0)
-			printf("Buzz");
-		else if (n % 3 == 0)
-			printf("Fizz");
+		if ((i % 3) == 0 && (i % 5) == 0)
+		{
+			printf("FizzBuzz ");
+		}
+		else if (i % 3 == 0)
+		{
+			printf("Fizz ");
+		}
+		else if (i % 5 == 0)
+		{
+			printf("Buzz ");
+		}
 		else
-			printf("%i", n);
-
-		if (n < 100)
-			printf(" ");
-		else
-			printf("\n");
+		{
+		printf("%d ", i);
+		}
 	}
+
+	printf("Buzz");
+	printf("\n");
+
 	return (0);
 }

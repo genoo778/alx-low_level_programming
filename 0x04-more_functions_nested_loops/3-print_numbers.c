@@ -1,20 +1,17 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * print_numbers - entry point
- *
- * Description: Prints the numbers with _putchar
- *
- * Return: void
- */
+ * print_numbers - prints the numbers, from 0 to 9, followed by a new line.
+**/
 
 void print_numbers(void)
 {
-	int number;
+	int i;
 
-	for (number = '0'; number <= '9'; number++)
+	for (i = '0'; i <= '9'; i++)
 	{
-		_putchar(number);
+		_putchar(i);
 	}
+
 	_putchar('\n');
 }

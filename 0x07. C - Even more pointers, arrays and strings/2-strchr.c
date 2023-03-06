@@ -1,21 +1,30 @@
-#include <stdio.h>
 #include "holberton.h"
 
 /**
- * _strchr - Entry point
- * @s: input
- * @c: input
- * Return: Always 0 (Success)
+ * _strchr - set memory function
+ *
+ * @s: pointer to array
+ * @c: char type
+ *
+ *
+ * Return: s
  */
+
 char *_strchr(char *s, char c)
 {
-	int i;
 
-	for (i = 0; s[i] >= '\0'; i++)
+	while (s[0] != '\0')
 	{
-		if (s[i] == c)
-			return (s + i);
-	}
 
-	return (NULL);
+		if (s[0] == c)
+
+			return (s);
+
+		else if (s[1] == c)
+
+			return (s + 1);
+
+		s++;
+	}
+	return (s + 1);
 }

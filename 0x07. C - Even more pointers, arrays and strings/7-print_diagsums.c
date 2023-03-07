@@ -1,20 +1,21 @@
-#include <stdio.h>
 #include "holberton.h"
 
 /**
- * print_diagsums - Entry point
- * @a: input
- * @size: input
- * Return: Always 0 (Success)
+ * print_chessboard - prints 2D array of chessboard
+ * @a: chessboard array
+ * Return: void
  */
-void print_diagsums(int *a, int size)
+
+void print_chessboard(char (*a)[8])
 {
-	int i, n, total1 = 0, total2 = 0;
+	int row, col;
 
-	for (i = 0; i <= (size * size); i = i + size + 1)
-		total1 = total1 + a[i];
-
-	for (n = size - 1; n <= (size * size) - size; n = n + size - 1)
-		total2 = total2 + a[n];
-	printf("%d, %d\n", total1, total2);
+	for (row = 0; row < 8; row++)
+	{
+		for (col = 0; col < 8; col++)
+		{
+			_putchar(a[row][col]);
+		}
+		_putchar('\n');
+	}
 }

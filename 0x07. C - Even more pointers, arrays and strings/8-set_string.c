@@ -1,27 +1,31 @@
 #include "holberton.h"
-#include <stdio.h>
+#include "stdio.h"
+
 /**
- * print_diagsums - Entry point
- * @a: input
- * @size: input
- * Return: Always 0 (Success)
+ * print_diagsums- sum diagonal values
+ *
+ * @a: pointer to array
+ *
+ * @size: int
+ *
+ *Return: sum of two sides
+ *
  */
+
 void print_diagsums(int *a, int size)
 {
-	int sum1, sum2, y;
+	int counter1, counter2, sum1, sum2;
 
 	sum1 = 0;
 	sum2 = 0;
 
-	for (y = 0; y < size; y++)
+	for (counter1 = 0; counter1 < size; counter1++)
 	{
-		sum1 = sum1 + a[y * size + y];
+		sum1 += a[(size + 1) * counter1];
 	}
-
-	for (y = size - 1; y >= 0; y--)
+	for (counter2 = 0; counter2 < size; counter2++)
 	{
-		sum2 += a[y * size + (size - y - 1)];
+		sum2 += a[(size - 1) * (counter2 + 1)];
 	}
-
 	printf("%d, %d\n", sum1, sum2);
 }

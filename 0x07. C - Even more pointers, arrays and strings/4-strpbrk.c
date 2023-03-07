@@ -1,24 +1,27 @@
-#include <stdio.h>
 #include "holberton.h"
 
 /**
- * _strpbrk - Entry point
- * @s: input
- * @accept: input
- * Return: Always 0 (Success)
+ * _strpbrk -  searches a string for any of a set of bytes.
+ *
+ * @s: char pointer
+ *
+ * @accept: char pointer
+ *
+ * Return: string
  */
+
 char *_strpbrk(char *s, char *accept)
 {
-	int i, n;
+	unsigned int counter;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (; *s != '\0'; s++)
 	{
-		for (n = 0; accept[n] != '\0'; n++)
+		for (counter = 0; accept[counter] != '\0'; counter++)
 		{
-			if (s[i] == accept[n])
-				return (s + i);
+
+			if (*s == accept[counter])
+				return (s);
 		}
 	}
-
-	return (NULL);
+	return (0);
 }
